@@ -1,6 +1,7 @@
 body{
     background-color: #781aab;
     font-size: 14px;
+    font-weight: 700;
     
 }
 
@@ -16,43 +17,43 @@ td{
     border: 1px solid #000000;
     padding: 5px;
 }
-
+/* lo de arriba */
 thead{
     background-color: #37454d;
     color: #ffffff;
 }
-
+/*centro */
 tbody{
-    background-color: #9CC4DB;
+    background-color: #adb4b8;
     color: #ffffff;
 }
-
+/* primera linea */
 tbody td:first-child{
     background-color: #7796A8;
 }
-
+/* clases  */
 #Class1{
-    background-color: #a7e9af;
-    color: #ffffff;
+    background-color: #cdecef;
+    color: #000000;
 }
 #Class2 {
-    background-color: #e7b2a5;
-    color: #ffffff;
+    background-color: #ceeccd;
+    color: #000000;
 }
 #Class3 {
-    background-color: #9dab86;
-    color: #ffffff;
+    background-color: #feffb3;
+    color: #000000;
 }
 #Class4 {
-    background-color: #f1935c;
-    color: #ffffff;
+    background-color: #eee7cc;
+    color: #000000;
 }
 #Class5 {
-    background-color: #ba6b57;
-    color: #ffffff;
+    background-color: #dfd4ea;
+    color: #000000;
 }
 #txt{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     color: #ffffff;
 }
