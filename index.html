@@ -11,6 +11,7 @@
     <title>Horario</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
 
     <!--Script para obtener la hora-->
     <script type="text/javascript">
@@ -38,9 +39,11 @@
 <body>
     <div class="container-md">
 
-        <div class="row">
-            <div class="col">
+        
 
+        <div class="col">
+            <div>
+                <h1>Semestre 2022-2</h1>
                 <div class="col-md-12">
                     <h1>La hora:</h1>
                     <!--Obtener la hora -->
@@ -49,54 +52,42 @@
                         startTime();
                     </script>
                 </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div>
-                <h1>Semestre 2022-2</h1>
 
                 <table>
-                    <!--fila-->
-                    <tr>
+                    <thead>
+                        <tr>
                         <!--columna-->
                         <td>Hora</td>
-                        <td>Lune</td>
+                        <td>Lunes</td>
                         <td>Martes</td>
                         <td>Miercoles</td>
                         <td>Jueves</td>
                         <td>Viernes</td>
-                        <td>Sabado</td>
-                        <td>Domingo</td>
                     </tr>
+                    </thead>
+                    <tbody>
                     <!--fila-->
                     <tr>
                         <td>08:15 - 09:35</td>
+                        <td id="Class1" >ADMINISTRACIÓN DE PROYECTOS INFORMÁTICOS</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="Class1">ADMINISTRACIÓN DE PROYECTOS INFORMÁTICOS</td>
                     </tr>
                     <!--fila-->
                     <tr>
                         <td>09:50 - 11:10</td>
+                        <td id="Class1">ADMINISTRACIÓN DE PROYECTOS INFORMÁTICOS</td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="Class2">SISTEMAS OPERATIVOS</td>
+                        <td id="Class2">SISTEMAS OPERATIVOS</td>
                         <td></td>
                     </tr>
                     <!--fila-->
                     <tr>
                         <td>11:25 - 12:45</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="Class2">SISTEMAS OPERATIVOS</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -105,34 +96,28 @@
                     <!--fila-->
                     <tr>
                         <td>13:45 - 15:05</td>
+                        <td id="Class3">REDES COMPUTACIONALES</td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="Class5">TÉCNICAS DE INGENIERÍA DE SOFTWARE</td>
+                        <td id="Class3">REDES COMPUTACIONALES</td>
                         <td></td>
                     </tr>
                     <!--fila-->
                     <tr>
                         <td>15:20 - 16:40</td>
+                        <td id="Class4">TALLER DE BASES DE DATOS</td>
+                        <td id="Class5">TÉCNICAS DE INGENIERÍA DE SOFTWARE</td>
+                        <td id="Class5">TÉCNICAS DE INGENIERÍA DE SOFTWARE</td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="Class3">REDES COMPUTACIONALES</td>
                     </tr>
 
                     <tr>
                         <td>16:55 - 18:15</td>
+                        <td id="Class4">TALLER DE BASES DE DATOS</td>
+                        <td id="Class4">TALLER DE BASES DE DATOS</td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="Class2">SISTEMAS OPERATIVOS</td>
                         <td></td>
                     </tr>
 
@@ -140,22 +125,10 @@
                         <td>18:45 - 20:05</td>
                         <td></td>
                         <td></td>
+                        <td id="Class3">REDES COMPUTACIONALES</td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td>18:45 - 20:05</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    </tbody>
                     </tr>
 
                 </table>

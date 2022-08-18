@@ -1,0 +1,58 @@
+body{
+    background-color: #781aab;
+    font-size: 14px;
+    
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    width: 100%;
+    margin: auto;
+
+}
+
+td{
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+thead{
+    background-color: #37454d;
+    color: #ffffff;
+}
+
+tbody{
+    background-color: #9CC4DB;
+    color: #ffffff;
+}
+
+tbody td:first-child{
+    background-color: #7796A8;
+}
+
+#Class1{
+    background-color: #a7e9af;
+    color: #ffffff;
+}
+#Class2 {
+    background-color: #e7b2a5;
+    color: #ffffff;
+}
+#Class3 {
+    background-color: #9dab86;
+    color: #ffffff;
+}
+#Class4 {
+    background-color: #f1935c;
+    color: #ffffff;
+}
+#Class5 {
+    background-color: #ba6b57;
+    color: #ffffff;
+}
+#txt{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
