@@ -4,7 +4,6 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Horario</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -34,10 +33,14 @@
 </head>
 
 <body>
+
+    
+<div class="bg-image"></div>
+
+<div class="bg-text">
     <div class="container-md">
         <div class="col">
             <div>
-                <h1>Semestre 2022-2</h1>
                 <div class="col-md-12">
                     <h1>
                     </h1>
@@ -49,7 +52,8 @@
                         startTime();
                     </script>
                 </div>
-                <table>
+                <center>
+                    <table>
                     <thead>
                         <tr>
                             <!--columna-->
@@ -186,54 +190,60 @@
                     </tbody>
                     </tr>
                 </table>
+                </center>
+                
             </div>
         </div>
     </div>
+</div>
 
-    <!--El siguiente codigo es para poder tener un visualizador de audio en Wallpaper engine-->
-    <canvas id="AudioCanvas"></canvas>
-    <script>
-        let audioCanvas = null;
-        let audioCanvasCtx = null;
-        function wallpaperAudioListener(audioArray) {
-            //color del fondo
-            audioCanvasCtx.fillStyle = '#781aab';
-            //efecto musica
+
+    <!--Nav bottom para dejar el visualizador de audio siempre abajo-->
+    <nav class="navbar fixed-bottom">
+        <!--El siguiente codigo es para poder tener un visualizador de audio en Wallpaper engine-->
+        <canvas id="AudioCanvas"></canvas>
+        <script>
+            let audioCanvas = null;
+            let audioCanvasCtx = null;
+            function wallpaperAudioListener(audioArray) {
+                // Clear the canvas and set it to black
+            audioCanvasCtx.fillStyle = 'rgb(162, 162, 176)';
             audioCanvasCtx.fillRect(0, 0, audioCanvas.width, audioCanvas.height);
+                // Barras de representación a lo largo de todo el ancho del lienzo
+                var barWidth = Math.round(1.0 / 128.0 * audioCanvas.width);
+                var halfCount = audioArray.length / 2;
 
-            // Barras de representación a lo largo de todo el ancho del lienzo
-            var barWidth = Math.round(1.0 / 128.0 * audioCanvas.width);
-            var halfCount = audioArray.length / 2;
+                // Comience con el canal izquierdo en rojo
+                audioCanvasCtx.fillStyle = 'rgb(255,0,0)';
+                // Iterar sobre los primeros 64 elementos de la matriz (0 - 63) para los datos de audio del canal izquierdo
+                for (var i = 0; i < halfCount; ++i) {
+                    // Crear una barra de audio con su altt dependiendo del nivel de volumen de audio de la frecuencia actual
+                    var height = audioCanvas.height * Math.min(audioArray[i], 1);
+                    audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
+                }
 
-            // Comience con el canal izquierdo en rojo
-            audioCanvasCtx.fillStyle = 'rgb(255,0,0)';
-            // Iterar sobre los primeros 64 elementos de la matriz (0 - 63) para los datos de audio del canal izquierdo
-            for (var i = 0; i < halfCount; ++i) {
-                // Crear una barra de audio con su altt dependiendo del nivel de volumen de audio de la frecuencia actual
-                var height = audioCanvas.height * Math.min(audioArray[i], 1);
-                audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
+                // Ahora dibuja el canal derecho en azul
+                audioCanvasCtx.fillStyle = 'rgb(0,0,255)';
+                // Iterar sobre los últimos 64 elementos de la matriz (64 - 127) para obtener los datos de audio del canal correcto
+                for (var i = halfCount; i < audioArray.length; ++i) {
+                    // Crea una barra de audio con su altt dependiendo del nivel de volumen de audio
+                    // Uso de audioArray[191 - i] aquí para invertir el canal correcto para la estética
+                    var height = audioCanvas.height * Math.min(audioArray[191 - i], 1);
+                    audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
+                }
             }
+            // Obtener el lienzo de audio una vez que la página se ha cargado
+            audioCanvas = document.getElementById('AudioCanvas');
+            //Configuración de la resolución de lienzo interno en la resolución de pantalla del usuario
+            //(El tamaño del lienzo CSS difiere del tamaño del lienzo interno)
+            audioCanvas.width = window.innerWidth;
+            //  Obtenga el contexto 2D del lienzo para dibujar en él en wallpaperAudioListener
+            audioCanvasCtx = audioCanvas.getContext('2d');
+            // Registre el oyente de audio proporcionado por Wallpaper Engine.
+            window.wallpaperRegisterAudioListener(wallpaperAudioListener);
+        </script>
+    </nav>
 
-            // Ahora dibuja el canal derecho en azul
-            audioCanvasCtx.fillStyle = 'rgb(0,0,255)';
-            // Iterar sobre los últimos 64 elementos de la matriz (64 - 127) para obtener los datos de audio del canal correcto
-            for (var i = halfCount; i < audioArray.length; ++i) {
-                // Crea una barra de audio con su altt dependiendo del nivel de volumen de audio
-                // Uso de audioArray[191 - i] aquí para invertir el canal correcto para la estética
-                var height = audioCanvas.height * Math.min(audioArray[191 - i], 1);
-                audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
-            }
-        }
 
-        // Obtener el lienzo de audio una vez que la página se ha cargado
-        audioCanvas = document.getElementById('AudioCanvas');
-        //Configuración de la resolución de lienzo interno en la resolución de pantalla del usuario
-        //(El tamaño del lienzo CSS difiere del tamaño del lienzo interno)
-        audioCanvas.width = window.innerWidth;
-        //  Obtenga el contexto 2D del lienzo para dibujar en él en wallpaperAudioListener
-        audioCanvasCtx = audioCanvas.getContext('2d');
-        // Registre el oyente de audio proporcionado por Wallpaper Engine.
-        window.wallpaperRegisterAudioListener(wallpaperAudioListener);
-    </script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
