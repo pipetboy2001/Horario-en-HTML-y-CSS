@@ -12,7 +12,7 @@ html {
 
 .bg-image {
     /* The image used */
-    background-image: url(http://image.znzgo.com/ins_bw_img/f111ad7c37ea4ccba92ebd8793b7db45.jpg);
+    background-image: url(../img/cats.jpg);
 
     /* Add the blur effect */
     filter: blur(8px);
