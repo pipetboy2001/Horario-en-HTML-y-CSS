@@ -1,249 +1,163 @@
-<!doctype html>
-<html lang="es">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Horario</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-    <link rel="stylesheet" href="assets/css/estilos.css">
+    <title>Corsair Corsair-o-Tron</title>
+    <link rel="stylesheet" href="estilos.css">
 
-    <!--Script para obtener la hora-->
-    <script type="text/javascript">
-        function startTime() {
-            var today = new Date();
-            var h = today.getHours();
-            var m = today.getMinutes();
-            var s = today.getSeconds();
-            // add a zero in front of numbers<10
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-            t = setTimeout('startTime()', 500);
+    <style>
+        body {
+            margin: 0;
         }
-        function checkTime(i) {
-            if (i < 10) {
-                i = "0" + i;
+
+        #logo-container {
+            width: 48vh; /* 20% of the viewport width */
+            height: 48vh;
+            position: fixed;
+            top: 8%;
+            left: 42%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #logo {
+            background-color: black;
+            -webkit-mask-image: url(images/Logo.svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-image: url(images/Logo.svg);
+            mask-repeat: no-repeat;
+            position: absolute;
+            width: 38%;
+            height: 38%;
+        }
+
+        #ring1 {
+            background-color: black;
+            -webkit-mask-image: url(images/Asset_1.svg);
+            mask-image: url(images/Asset_1.svg);
+            position: absolute;
+            width: 78%;
+            height: 78%;
+            -webkit-animation: rotate-right 10s linear infinite;
+        }
+
+        #ring2 {
+            background-color: black;
+            -webkit-mask-image: url(images/Asset_2.svg);
+            mask-image: url(images/Asset_2.svg);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-animation: rotate-left 10s linear infinite;
+        }
+
+        #ring3 {
+            background-color: black;
+            -webkit-mask-image: url(images/Asset_3.svg);
+            mask-image: url(images/Asset_3.svg);
+            position: absolute;
+            width: 97%;
+            height: 97%;
+        }
+
+        #robot {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(images/bot_bw.png);
+            position: fixed;
+            top: 5%;
+            right: 0;
+            left: 60%;
+            height: 90%;
+        }
+
+        #renderCanvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            background: #000000;
+        }
+
+        #keyboardCanvas {
+            display: none;
+            background: #000000;
+        }
+
+        #mousematCanvas {
+            display: none;
+            background: #000000;
+        }
+
+        #nodeCanvas {
+            display: none;
+            background: #000000;
+        }
+
+        @-webkit-keyframes rotate-right {
+            from {
+                -webkit-transform: rotate(0deg);
             }
-            return i;
+            to {
+                -webkit-transform: rotate(360deg);
+            }
         }
-    </script>
+
+        @-webkit-keyframes rotate-left {
+            from {
+                -webkit-transform: rotate(360deg);
+            }
+            to {
+                -webkit-transform: rotate(0deg);
+            }
+        }
+
+       
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: fixed;
+            width: 50%;
+            height: 50%;
+
+            top: 15%;
+
+            right: 20%;
+            left: 0%;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid rgb(255, 255, 255);
+            background-color: white;
+        }
+
+    </style>
 </head>
 
 <body>
 
-    
-<div class="bg-image"></div>
+<div id="table"></div>
 
-<div class="bg-text">
-    <div class="container-md">
-        <div class="col">
-            <div>
-                <div class="col-md-12">
-                    <h1>
-                    </h1>
-                    <!--Obtener la hora -->
-                    <center>
-                        <p id="txt"></p>
-                    </center>
-                    <script type="text/javascript">
-                        startTime();
-                    </script>
-                </div>
-                <center>
-                    <table>
-                    <thead>
-                        <tr>
-                            <!--columna-->
-                            <td>Hora</td>
-                            <td>
-                                <center>Lunes</center>
-                            </td>
-                            <td>
-                                <center>Martes</center>
-                            </td>
-                            <td>
-                                <center>Miercoles</center>
-                            </td>
-                            <td>
-                                <center>Jueves</center>
-                            </td>
-                            <td>
-                                <center>Viernes</center>
-                            </td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!--fila-->
-                        <tr>
-                            <td>08:15 - 09:35</td>
-                            <td id="Class1">
-                                <center>ADMINISTRACIÓN DE PROYECTOS INFORMÁTICOS</center>
-                                <center>INF520</center>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td id="Class1">
-                                <center>ADMINISTRACIÓN DE PROYECTOS INFORMÁTICOS</center>
-                                <center>INF520</center>
-                            </td>
-                        </tr>
-                        <!--fila-->
-                        <tr>
-                            <td>09:50 - 11:10</td>
-                            <td id="Class1">
-                                <center>ADMINISTRACIÓN DE PROYECTOS INFORMÁTICOS</center>
-                                <center>INF520</center>
-                            </td>
-                            <td></td>
-                            <td id="Class2">
-                                <center>SISTEMAS OPERATIVOS</center>
-                                <center>EAO561</center>
-                            </td>
-                            <td id="Class2">
-                                <center>SISTEMAS OPERATIVOS</center>
-                                <center>ED705</center>
-                            </td>
-                            <td></td>
-                        </tr>
-                        <!--fila-->
-                        <tr>
-                            <td>11:25 - 12:45</td>
-                            <td id="Class2">
-                                <center>SISTEMAS OPERATIVOS</center>
-                                <center>INF526</center>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <!--fila-->
-                        <tr>
-                            <td>13:45 - 15:05</td>
-                            <td id="Class3">
-                                <center>REDES COMPUTACIONALES</center>
-                                <center>INF202</center>
-                            </td>
-                            <td></td>
-                            <td id="Class5">
-                                <center>TÉCNICAS DE INGENIERÍA DE SOFTWARE</center>
-                                <center>ED802</center>
-                            </td>
-                            <td id="Class3">
-                                <center>REDES COMPUTACIONALES</center>
-                                <center>EAO518</center>
-                            </td>
-                            <td></td>
-                        </tr>
-                        <!--fila-->
-                        <tr>
-                            <td>15:20 - 16:40</td>
-                            <td id="Class4">
-                                <center>TALLER DE BASES DE DATOS</center>
-                                <center>ED705</center>
-                            </td>
-                            <td id="Class5">
-                                <center>TÉCNICAS DE INGENIERÍA DE SOFTWARE</center>
-                                <center>ED705</center>
-                            </td>
-                            <td id="Class5">
-                                <center>AYUDANTIAS TÉCNICAS DE INGENIERÍA DE SOFTWARE</center>
-                                <center>ED802</center>
-                            </td>
-                            <td></td>
-                            <td id="Class3">
-                                <center>REDES COMPUTACIONALES</center>
-                                <center>EAO518</center>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>16:55 - 18:15</td>
-                            <td id="Class4">
-                                <center>TALLER DE BASES DE DATOS</center>
-                                <center>ED705</center>
-                            </td>
-                            <td id="Class4">
-                                <center>TALLER DE BASES DE DATOS</center>
-                                <center>ED705</center>
-                            </td>
-                            <td></td>
-                            <td id="Class2">
-                                <center>SISTEMAS OPERATIVOS </center>
-                                <center>ED705</center>
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>18:45 - 20:05</td>
-                            <td></td>
-                            <td></td>
-                            <td id="Class3">
-                                <center>LABORATORIO REDES COMPUTACIONALES</center>
-                                <center>DIINF 14</center>
-                            </td>
-                            <td></td>
-                            <td></td>
-                    </tbody>
-                    </tr>
-                </table>
-                </center>
-                
-            </div>
-        </div>
-    </div>
-</div>
+<!-- <div id="logo-container">
+    <div id="table"></div>
+    <div id="logo"></div>
+    <div id="ring1"></div>
+    <div id="ring2"></div>
+    <div id="ring3"></div>
+</div> -->
+<div id="robot"></div>
 
+<canvas id="keyboardCanvas"></canvas>
+<canvas id="mousematCanvas"></canvas>
+<canvas id="nodeCanvas"></canvas>
+<canvas id="renderCanvas"></canvas>
 
-    <!--Nav bottom para dejar el visualizador de audio siempre abajo-->
-    <nav class="navbar fixed-bottom">
-        <!--El siguiente codigo es para poder tener un visualizador de audio en Wallpaper engine-->
-        <canvas id="AudioCanvas"></canvas>
-        <script>
-            let audioCanvas = null;
-            let audioCanvasCtx = null;
-            function wallpaperAudioListener(audioArray) {
-                // Clear the canvas and set it to black
-            audioCanvasCtx.fillStyle = 'rgb(162, 162, 176)';
-            audioCanvasCtx.fillRect(0, 0, audioCanvas.width, audioCanvas.height);
-                // Barras de representación a lo largo de todo el ancho del lienzo
-                var barWidth = Math.round(1.0 / 128.0 * audioCanvas.width);
-                var halfCount = audioArray.length / 2;
-
-                // Comience con el canal izquierdo en rojo
-                audioCanvasCtx.fillStyle = 'rgb(255,0,0)';
-                // Iterar sobre los primeros 64 elementos de la matriz (0 - 63) para los datos de audio del canal izquierdo
-                for (var i = 0; i < halfCount; ++i) {
-                    // Crear una barra de audio con su altt dependiendo del nivel de volumen de audio de la frecuencia actual
-                    var height = audioCanvas.height * Math.min(audioArray[i], 1);
-                    audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
-                }
-
-                // Ahora dibuja el canal derecho en azul
-                audioCanvasCtx.fillStyle = 'rgb(0,0,255)';
-                // Iterar sobre los últimos 64 elementos de la matriz (64 - 127) para obtener los datos de audio del canal correcto
-                for (var i = halfCount; i < audioArray.length; ++i) {
-                    // Crea una barra de audio con su altt dependiendo del nivel de volumen de audio
-                    // Uso de audioArray[191 - i] aquí para invertir el canal correcto para la estética
-                    var height = audioCanvas.height * Math.min(audioArray[191 - i], 1);
-                    audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
-                }
-            }
-            // Obtener el lienzo de audio una vez que la página se ha cargado
-            audioCanvas = document.getElementById('AudioCanvas');
-            //Configuración de la resolución de lienzo interno en la resolución de pantalla del usuario
-            //(El tamaño del lienzo CSS difiere del tamaño del lienzo interno)
-            audioCanvas.width = window.innerWidth;
-            //  Obtenga el contexto 2D del lienzo para dibujar en él en wallpaperAudioListener
-            audioCanvasCtx = audioCanvas.getContext('2d');
-            // Registre el oyente de audio proporcionado por Wallpaper Engine.
-            window.wallpaperRegisterAudioListener(wallpaperAudioListener);
-        </script>
-    </nav>
-
-
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
+<script src="table.js"></script>
+<script src="./js/chroma.min.js"></script>
+<script src="./js/TweenMax.min.js"></script>
+<script src="./js/math.min.js"></script>
+<script src="./js/main.js"></script>
+</html>
