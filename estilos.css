@@ -11,12 +11,12 @@ html {
 #Personaje {
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(images/waifu.png);
+    background-image: url(images/waifu.gif);
     position: fixed;
-    top: 5%;
+    top: 30%;
     right: 0;
     left: 60%;
-    height: 90%;
+    height: 70%;
 }
 
 /* musica */
@@ -109,4 +109,24 @@ tbody td:first-child{
 #Class5 {
     background-color: #dfd4ea;
     color: #000000;
+}
+
+/*clock contenedor*/
+.container-clock {
+    color: #eee7cc;
+    position: fixed;
+        top: 2%;
+        right: 10%;
+        left: 0;
+        height: 90%;
+}
+/*time*/
+.container-clock h1 {
+    font-size: 5rem;
+    font-weight: 400;
+}
+/* date */
+.container-clock p {
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
