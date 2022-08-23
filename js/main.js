@@ -13,10 +13,6 @@ var audioScale = chroma.scale([
     chroma('white'),
     chroma('black')]
 );
-var logo = document.getElementById('logo');
-var ring1 = document.getElementById('ring1');
-var ring2 = document.getElementById('ring2');
-var ring3 = document.getElementById('ring3');
 
 var colorStops = [
     {stopPercent: 0.1428571428571429, color: '#ff0000'},
@@ -79,8 +75,8 @@ if (scale === 1) {
     canvas.height = h * scale;
 }
 
-// Robot div
-var robot = document.getElementById('robot');
+// Personaje div
+var Personaje = document.getElementById('Personaje');
 
 function start() {
     if (running) {
@@ -341,30 +337,6 @@ window.wallpaperPropertyListener = {
             var barColors = properties.schemecolor.value.split(' ');
             barColor = chroma(barColors[0], barColors[1], barColors[2], 'gl');
         }
-        if (properties.logocolor) {
-            var logoColors = properties.logocolor.value.split(' ');
-            var logoColor = chroma(logoColors[0], logoColors[1], logoColors[2], 'gl');
-
-            logo.style.backgroundColor = logoColor.css();
-            ring1.style.backgroundColor = logoColor.css();
-            ring2.style.backgroundColor = logoColor.css();
-            ring3.style.backgroundColor = logoColor.css();
-        }
-        if (properties.logorings) {
-            if (properties.logorings.value === true) {
-                logo.style.width = '38%';
-                logo.style.height = '38%';
-                ring1.style.display = 'block';
-                ring2.style.display = 'block';
-                ring3.style.display = 'block';
-            } else {
-                logo.style.width = '60%';
-                logo.style.height = '60%';
-                ring1.style.display = 'none';
-                ring2.style.display = 'none';
-                ring3.style.display = 'none';
-            }
-        }
         if (properties.backgroundcolor) {
             var bgColors = properties.backgroundcolor.value.split(' ');
             backgroundColor = chroma(bgColors[0], bgColors[1], bgColors[2], 'gl');
@@ -384,9 +356,9 @@ window.wallpaperPropertyListener = {
         }
         if (properties.colorized) {
             if (properties.colorized.value === true) {
-                robot.style.backgroundImage = 'url(images/bot_color.png)';
+                Personaje.style.backgroundImage = 'url(images/bot_color.png)';
             } else {
-                robot.style.backgroundImage = 'url(images/bot_bw.png)';
+                Personaje.style.backgroundImage = 'url(images/waifu.png)';
             }
         }
         if (properties.sensitivity) {

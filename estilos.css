@@ -6,77 +6,52 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-}
 
-.bg-image {
-    /* The image used */
-    background-image: url(../img/cats.jpg);
 
-    /* Add the blur effect */
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+/* Tabla colores */
 
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Position text in the middle of the page/image */
-.bg-text {
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 80%;
-    padding: 20px;
-    text-align: center;
-}
-
-canvas{
-    height: 10vh;
-    width: 100vw;
-}
-
-table{
+table {
     border-collapse: collapse;
+    border-spacing: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
     border: 1px solid #000000;
-    width: 100%;
     margin: auto;
+    width: 50%;
+    height: 50%;
 
-}
+    top: 15%;
 
-td{
-    border: 1px solid #000000;
-    padding: 5px;
+    right: 20%;
+    left: 0%;
 }
 /* lo de arriba */
+th,td {
+    padding: 10px 20px;
+    padding: 5px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
 thead{
     background-color: #37454d;
     color: #000000;
 }
 /*centro */
 tbody{
-    background-color: #adb4b8;
+    background-color: #b8b7ad;
     color: #000000;
 }
 /* primera linea */
 tbody td:first-child{
     background-color: #7796A8;
 }
+
+#row_3 {
+    background-color: rgb(16, 183, 27);
+    color: #000000;
+}
+
 /* clases  */
 #Class1{
     background-color: #cdecef;
@@ -98,8 +73,27 @@ tbody td:first-child{
     background-color: #dfd4ea;
     color: #000000;
 }
-#txt{
-    font-size: 40px;
-    font-weight: bold;
-    color: #ffffff;
+
+
+/* canvas render */
+#renderCanvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background: #000000;
+}
+
+#keyboardCanvas {
+    display: none;
+    background: #000000;
+}
+
+#mousematCanvas {
+    display: none;
+    background: #000000;
+}
+
+#nodeCanvas {
+    display: none;
+    background: #000000;
 }

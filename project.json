@@ -1,7 +1,7 @@
 {
   "description": "An iCUE enabled sound visualization wallpaper featuring the Corsair-O-Tron",
   "file": "index.html",
-  "preview" : "preview.jpg",
+  "preview" : "preview.gif",
   "general": {
     "properties": {
       "sensitivity": {
