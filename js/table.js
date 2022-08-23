@@ -5,6 +5,7 @@ let tbody = document.createElement('tbody');
 table.appendChild(thead);
 table.appendChild(tbody);
 
+
 // Adding the entire table to the body tag
 document.getElementById('table').appendChild(table);
 

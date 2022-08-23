@@ -1,115 +1,135 @@
 {
-  "description": "An iCUE enabled sound visualization wallpaper featuring the Corsair-O-Tron",
-  "file": "index.html",
-  "preview" : "preview.gif",
-  "general": {
-    "properties": {
-      "sensitivity": {
-        "order": 0,
-        "editable": true,
-        "max": 20,
-        "min": 1,
-        "text": "Audio sensitivity",
-        "type": "slider",
-        "value": 1
-      },
-      "calculationtype" :
-      {
-        "order": 1,
-        "text" : "Peak calculation type",
-        "type" : "combo",
-        "value" : "max",
-        "options" :
-        [
-          {
-            "value" : "max",
-            "label" : "Max value"
-          },
-          {
-            "value" : "median",
-            "label" : "Median"
-          },
-          {
-            "value" : "mean",
-            "label" : "Mean"
-          },
-          {
-            "value" : "average",
-            "label" : "Average"
-          }
-        ]
-      },
-      "peaksensitivity": {
-        "order": 2,
-        "editable": true,
-        "max": 20,
-        "min": 1,
-        "text": "Peak sensitivity",
-        "type": "slider",
-        "value": 1
-      },
-      "logorings": {
-        "order": 3,
-        "text": "Show logo rings",
-        "type": "bool",
-        "value": "true"
-      },
-      "logocolor": {
-        "order": 4,
-        "text": "Logo color",
-        "type": "color",
-        "value": "0 0 0"
-      },
-      "backgroundcolor": {
-        "order": 5,
-        "text": "Background color",
-        "type": "color",
-        "value": "1 1 1"
-      },
-      "schemecolor": {
-        "order": 6,
-        "text": "Bar color",
-        "type": "color",
-        "value": "0 0 0"
-      },
-      "rainbowscheme": {
-        "order": 7,
-        "text": "Rainbow bars",
-        "type": "bool",
-        "value": false
-      },
-      "cyclerainbow": {
-        "order": 8,
-        "text": "Cycle rainbow",
-        "type": "bool",
-        "value": false,
-        "condition" : "rainbowscheme.value"
-      },
-      "showbottom": {
-        "order": 9,
-        "text": "Bottom bar height",
-        "type": "slider",
-        "min" : 0,
-        "max" : 650,
-        "value": "150"
-      },
-      "bottomcolor": {
-        "order": 10,
-        "text": "Bottom bar color",
-        "type": "color",
-        "value": "0.5490196078431373 0.5490196078431373 0.5490196078431373",
-        "condition" : "showbottom.value > 0"
-      },
-      "colorized": {
-        "order": 11,
-        "text": "Show colorized Corsair-O-Tron",
-        "type": "bool",
-        "value": false
-      }
-    },
-    "supportsaudioprocessing": true
-  },
-  "title": "Corsair-O-Tron",
-  "type": "web",
-  "official" : true
+	"approved" : true,
+	"contentrating" : "Everyone",
+	"description" : "Horario de clase",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"advanceSmooth" : 
+			{
+				"index" : 8,
+				"order" : 108,
+				"text" : "Advance Smoothing",
+				"type" : "bool",
+				"value" : false
+			},
+			"bgcolor" : 
+			{
+				"index" : 9,
+				"order" : 109,
+				"text" : "Background Color",
+				"type" : "color",
+				"value" : "0.125 0.125 0.125"
+			},
+			"bgimage" : 
+			{
+				"index" : 11,
+				"order" : 111,
+				"text" : "Background Image",
+				"type" : "file"
+			},
+			"bgpixelated" : 
+			{
+				"index" : 12,
+				"order" : 112,
+				"text" : "Pixel-Perfect Image",
+				"type" : "bool"
+			},
+			"bgvideo" : 
+			{
+				"fileType" : "video",
+				"index" : 10,
+				"order" : 110,
+				"text" : "Background Video (overrides image) (broken)",
+				"type" : "file"
+			},
+			"bloom" : 
+			{
+				"index" : 4,
+				"order" : 104,
+				"text" : "Bloom (cpu heavy!)",
+				"type" : "bool",
+				"value" : true
+			},
+			"bloomRadius" : 
+			{
+				"index" : 5,
+				"max" : 20,
+				"min" : 4,
+				"order" : 105,
+				"text" : "Bloom Radius (cpu heavy!)",
+				"type" : "slider",
+				"value" : 10
+			},
+			"color1" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "Color 1",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"color2" : 
+			{
+				"index" : 1,
+				"order" : 101,
+				"text" : "Color 2",
+				"type" : "color",
+				"value" : "0.5 0.5 0.5"
+			},
+			"filter" : 
+			{
+				"index" : 6,
+				"order" : 106,
+				"text" : "Filter Noise",
+				"type" : "bool",
+				"value" : true
+			},
+			"normalize" : 
+			{
+				"index" : 7,
+				"order" : 107,
+				"text" : "Normalize Signals",
+				"type" : "bool",
+				"value" : true
+			},
+			"offset" : 
+			{
+				"index" : 3,
+				"max" : 100,
+				"min" : 0,
+				"order" : 103,
+				"text" : "Offset",
+				"type" : "slider",
+				"value" : 50
+			},
+			"scale" : 
+			{
+				"index" : 2,
+				"max" : 18,
+				"min" : 2,
+				"order" : 102,
+				"text" : "Scale",
+				"type" : "slider",
+				"value" : 12
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "Scheme color",
+				"type" : "color",
+				"value" : "0.125 0.125 0.125"
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"monetization" : false,
+	"preview" : "preview.gif",
+	"tags" : [ "Music" ],
+	"title" : "class schedule",
+	"type" : "Web",
+	"version" : 2,
+	"visibility" : "public"
 }

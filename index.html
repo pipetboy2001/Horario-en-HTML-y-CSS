@@ -5,6 +5,21 @@
     <title>Corsair Corsair-o-Tron</title>
     <link rel="stylesheet" href="estilos.css">
 
+    <style type='text/css'>
+        canvas {
+           background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(images/waifu.png);
+            position: fixed;
+            top: 5%;
+            right: 0;
+            left: 60%;
+            height: 90%;
+        }
+    
+        
+    </style>
+
     <style>
         #Personaje {
             background-size: contain;
@@ -17,36 +32,59 @@
             height: 90%;
         }
 
-        body {
+        .bg-image {
+            background-color: blueviolet;
+            /* The image used */
             background-image: url(./images/galaxia.jpg);
+
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+
+            /* Full height */
+            height: 60%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
+
+        AudioCanvas {
+            position: fixed;
+            top: 5%;
+            right: 0;
+            left: 60%;
+            height: 90%;
+        }
+
+
+       
     </style>
 </head>
 
 <body>
 
+
+    <div class="bg-image"></div>
+    <canvas id='canvas'></canvas>
     <div id="table"></div>
-
-
     <div id="Personaje"></div>
 
-    <canvas id="keyboardCanvas"></canvas>
 
-    <canvas id="mousematCanvas"></canvas>
-
-
-    <canvas id="nodeCanvas"></canvas>
-
-
-    <canvas id="renderCanvas"></canvas> -->
-
-
+    </div>
+    </div>
+    </div>
+    </div>
 </body>
 
+
+<script src="./js/sound.js"></script>
 <script src="./js/table.js"></script>
+<!-- 
 <script src="./js/chroma.min.js"></script>
 <script src="./js/TweenMax.min.js"></script>
-<script src="./js/math.min.js"></script>
-<script src="./js/main.js"></script>
+<script src="./js/math.min.js"></script> -->
+<!--script src="./js/main.js"></script> -->
 
 </html>
