@@ -6,7 +6,49 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* personaje */
 
+#Personaje {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(images/waifu.png);
+    position: fixed;
+    top: 5%;
+    right: 0;
+    left: 60%;
+    height: 90%;
+}
+
+/* musica */
+
+ canvas {
+     transform: rotate(180deg);
+     position: fixed;
+     top: 10%;
+     right: 0;
+     left: 0%;
+     height: 100%;
+ }
+
+ /* fondo */
+
+.bg-image {
+    background-color: blueviolet;
+    /* The image used */
+    background-image: url(./images/galaxia.jpg);
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    /* Full height */
+    height: 60%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* Tabla colores */
 
@@ -21,7 +63,7 @@ table {
     width: 50%;
     height: 50%;
 
-    top: 15%;
+    top: 18%;
 
     right: 20%;
     left: 0%;
@@ -32,7 +74,7 @@ th,td {
     padding: 5px;
     border: 1px solid rgb(255, 255, 255);
 }
-
+/*arriba*/
 thead{
     background-color: #37454d;
     color: #000000;
@@ -42,14 +84,9 @@ tbody{
     background-color: #b8b7ad;
     color: #000000;
 }
-/* primera linea */
+/* primera columna */
 tbody td:first-child{
     background-color: #7796A8;
-}
-
-#row_3 {
-    background-color: rgb(16, 183, 27);
-    color: #000000;
 }
 
 /* clases  */
@@ -72,28 +109,4 @@ tbody td:first-child{
 #Class5 {
     background-color: #dfd4ea;
     color: #000000;
-}
-
-
-/* canvas render */
-#renderCanvas {
-    width: 100vw;
-    height: 100vh;
-    display: block;
-    background: #000000;
-}
-
-#keyboardCanvas {
-    display: none;
-    background: #000000;
-}
-
-#mousematCanvas {
-    display: none;
-    background: #000000;
-}
-
-#nodeCanvas {
-    display: none;
-    background: #000000;
 }

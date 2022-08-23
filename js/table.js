@@ -5,7 +5,6 @@ let tbody = document.createElement('tbody');
 table.appendChild(thead);
 table.appendChild(tbody);
 
-
 // Adding the entire table to the body tag
 document.getElementById('table').appendChild(table);
 
@@ -40,14 +39,18 @@ row_2_data_1.innerHTML = "08:15 - 09:35";
 
 let row_2_data_2 = document.createElement('td');
 row_2_data_2.innerHTML = " Admin INF520";
+row_2_data_2.style.backgroundColor = '#cdecef';
+
 let row_2_data_3 = document.createElement('td');
 row_2_data_3.innerHTML = " ";
 let row_2_data_4 = document.createElement('td');
 row_2_data_4.innerHTML = " ";
 let row_2_data_5 = document.createElement('td');
 row_2_data_5.innerHTML = " ";
+
 let row_2_data_6 = document.createElement('td');
 row_2_data_6.innerHTML = "ADMIN INF520";
+row_2_data_6.style.backgroundColor = '#cdecef';
 
 row_2.appendChild(row_2_data_1);
 row_2.appendChild(row_2_data_2);
@@ -62,15 +65,22 @@ tbody.appendChild(row_2);
 let row_3 = document.createElement('tr');
 let row_3_data_1 = document.createElement('td');
 row_3_data_1.innerHTML = "09:50 - 11:10";
+
 let row_3_data_2 = document.createElement('td');
 row_3_data_2.innerHTML = "Admin INF520";
-row_3_data_2.style.backgroundColor = "red";
+row_3_data_2.style.backgroundColor = '#cdecef';
+
 let row_3_data_3 = document.createElement('td');
 row_3_data_3.innerHTML = " ";
+
 let row_3_data_4 = document.createElement('td');
 row_3_data_4.innerHTML = "Sistope EAO561";
+row_3_data_4.style.backgroundColor = '#ceeccd';
+
 let row_3_data_5 = document.createElement('td');
 row_3_data_5.innerHTML = "Sistope ED705";
+row_3_data_5.style.backgroundColor = '#ceeccd';
+
 let row_3_data_6 = document.createElement('td');
 row_3_data_6.innerHTML = " ";
 
@@ -88,6 +98,8 @@ let row_4_data_1 = document.createElement('td');
 row_4_data_1.innerHTML = "11:25 - 12:45";
 let row_4_data_2 = document.createElement('td');
 row_4_data_2.innerHTML = "Sistope INF526";
+row_4_data_2.style.backgroundColor = '#ceeccd';
+
 let row_4_data_3 = document.createElement('td');
 row_4_data_3.innerHTML = " ";
 let row_4_data_4 = document.createElement('td');
@@ -111,12 +123,18 @@ let row_5_data_1 = document.createElement('td');
 row_5_data_1.innerHTML = "13:45 - 15:05";
 let row_5_data_2 = document.createElement('td');
 row_5_data_2.innerHTML = "Redes INF202";
+row_5_data_2.style.backgroundColor = '#feffb3';
+
 let row_5_data_3 = document.createElement('td');
 row_5_data_3.innerHTML = " ";
 let row_5_data_4 = document.createElement('td');
 row_5_data_4.innerHTML = "Tingeso ED802";
+row_5_data_4.style.backgroundColor = '#eee7cc';
+
 let row_5_data_5 = document.createElement('td');
 row_5_data_5.innerHTML = "Redes EAO518";
+row_5_data_5.style.backgroundColor = '#feffb3';
+
 let row_5_data_6 = document.createElement('td');
 row_5_data_6.innerHTML = " ";
 
@@ -134,14 +152,22 @@ let row_6_data_1 = document.createElement('td');
 row_6_data_1.innerHTML = "15:20 - 16:40";
 let row_6_data_2 = document.createElement('td');
 row_6_data_2.innerHTML = "TDB ED705";
+row_6_data_2.style.backgroundColor = '#dfd4ea';
+
 let row_6_data_3 = document.createElement('td');
 row_6_data_3.innerHTML = "Tingeso ED705";
+row_6_data_3.style.backgroundColor = '#eee7cc';
+
 let row_6_data_4 = document.createElement('td');
 row_6_data_4.innerHTML = "Tingeso ED802";
+row_6_data_4.style.backgroundColor = '#eee7cc';
+
 let row_6_data_5 = document.createElement('td');
 row_6_data_5.innerHTML = " ";
 let row_6_data_6 = document.createElement('td');
+
 row_6_data_6.innerHTML = "Redes EAO518";
+row_6_data_6.style.backgroundColor = '#feffb3';
 
 row_6.appendChild(row_6_data_1);
 row_6.appendChild(row_6_data_2);
@@ -157,12 +183,17 @@ let row_7_data_1 = document.createElement('td');
 row_7_data_1.innerHTML = "16:55 - 18:15";
 let row_7_data_2 = document.createElement('td');
 row_7_data_2.innerHTML = "TDB ED705";
+row_7_data_2.style.backgroundColor = '#dfd4ea';
 let row_7_data_3 = document.createElement('td');
 row_7_data_3.innerHTML = "TDB ED705";
+row_7_data_3.style.backgroundColor = '#dfd4ea';
 let row_7_data_4 = document.createElement('td');
 row_7_data_4.innerHTML = " ";
+
 let row_7_data_5 = document.createElement('td');
 row_7_data_5.innerHTML = "Sistope ED705";
+row_7_data_5.style.backgroundColor = '#ceeccd';
+
 let row_7_data_6 = document.createElement('td');
 row_7_data_6.innerHTML = " ";
 
@@ -184,6 +215,7 @@ let row_8_data_3 = document.createElement('td');
 row_8_data_3.innerHTML = " ";
 let row_8_data_4 = document.createElement('td');
 row_8_data_4.innerHTML = "Redes DIINF 14";
+row_8_data_4.style.backgroundColor = '#feffb3';
 let row_8_data_5 = document.createElement('td');
 row_8_data_5.innerHTML = " ";
 let row_8_data_6 = document.createElement('td');

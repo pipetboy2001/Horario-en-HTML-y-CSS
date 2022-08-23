@@ -2,89 +2,24 @@
 <html>
 
 <head>
-    <title>Corsair Corsair-o-Tron</title>
+    <title>class_schedule</title>
     <link rel="stylesheet" href="estilos.css">
-
-    <style type='text/css'>
-        canvas {
-           background-size: contain;
-            background-repeat: no-repeat;
-            background-image: url(images/waifu.png);
-            position: fixed;
-            top: 5%;
-            right: 0;
-            left: 60%;
-            height: 90%;
-        }
-    
-        
-    </style>
-
-    <style>
-        #Personaje {
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-image: url(images/waifu.png);
-            position: fixed;
-            top: 5%;
-            right: 0;
-            left: 60%;
-            height: 90%;
-        }
-
-        .bg-image {
-            background-color: blueviolet;
-            /* The image used */
-            background-image: url(./images/galaxia.jpg);
-
-            /* Add the blur effect */
-            filter: blur(8px);
-            -webkit-filter: blur(8px);
-
-            /* Full height */
-            height: 60%;
-
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        AudioCanvas {
-            position: fixed;
-            top: 5%;
-            right: 0;
-            left: 60%;
-            height: 90%;
-        }
-
-
-       
-    </style>
 </head>
 
 <body>
-
-
+    <!--background-->
     <div class="bg-image"></div>
+    <!--music-->
     <canvas id='canvas'></canvas>
+    <!--tabla-->
     <div id="table"></div>
+    <!--personaje-->
     <div id="Personaje"></div>
-
-
-    </div>
-    </div>
-    </div>
-    </div>
 </body>
 
-
+<!--Sound-->
 <script src="./js/sound.js"></script>
+<!--Tabla-->
 <script src="./js/table.js"></script>
-<!-- 
-<script src="./js/chroma.min.js"></script>
-<script src="./js/TweenMax.min.js"></script>
-<script src="./js/math.min.js"></script> -->
-<!--script src="./js/main.js"></script> -->
 
 </html>
