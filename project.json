@@ -7,76 +7,17 @@
 	{
 		"properties" : 
 		{
-			"bloom" : 
+			"ChangeWalpaper" : 
 			{
-				"index" : 4,
-				"order" : 104,
-				"text" : "Bloom (cpu heavy!)",
-				"type" : "bool",
-				"value" : true
-			},
-			"bloomRadius" : 
-			{
-				"index" : 5,
-				"max" : 20,
-				"min" : 4,
-				"order" : 105,
-				"text" : "Bloom Radius (cpu heavy!)",
-				"type" : "slider",
-				"value" : 10
-			},
-			"color1" : 
-			{
-				"index" : 0,
-				"order" : 100,
-				"text" : "Color 1",
-				"type" : "color",
-				"value" : "1 1 1"
-			},
-			"color2" : 
-			{
-				"index" : 1,
-				"order" : 101,
-				"text" : "Color 2",
-				"type" : "color",
-				"value" : "0.5 0.5 0.5"
-			},
-			"filter" : 
-			{
-				"index" : 6,
-				"order" : 106,
-				"text" : "Filter Noise",
-				"type" : "bool",
-				"value" : true
-			},
-			"normalize" : 
-			{
-				"index" : 7,
-				"order" : 107,
-				"text" : "Normalize Signals",
-				"type" : "bool",
-				"value" : true
-			},
-			"offset" : 
-			{
-				"index" : 3,
-				"max" : 100,
-				"min" : 0,
-				"order" : 103,
-				"text" : "Offset",
-				"type" : "slider",
-				"value" : 50
-			},
-			"scale" : 
-			{
-				"index" : 2,
-				"max" : 18,
-				"min" : 2,
-				"order" : 102,
-				"text" : "Scale",
-				"type" : "slider",
-				"value" : 6
-			},
+				"category" : "General",
+				"description" : "Change the background image",
+				"displayName" : "Change Walpaper",
+				"editor" : "image",
+				"order" : 1,
+				"required" : false,
+				"type" : "string"
+			}
+			
 		},
 		"supportsaudioprocessing" : true
 	},
