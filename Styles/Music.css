@@ -1,0 +1,8 @@
+canvas {
+    transform: rotate(180deg);
+    position: fixed;
+    top: 10%;
+    right: 0;
+    left: 0%;
+    height: 100%;
+}

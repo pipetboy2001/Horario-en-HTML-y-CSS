@@ -6,19 +6,3 @@ html {
     background-color: black;
 }
 
-.bg-image {
-    background-color: blueviolet;
-    /* The image used */
-    background-image: url(../images/default-background.jpg);
-
-    /* Add the blur effect */
-    -webkit-filter: blur(8px);
-    filter: blur(8px);
-    /* Full height */
-    height: 60%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}

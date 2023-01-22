@@ -1,7 +1,14 @@
-//Asumir que esta es la funcion que se ejecuta al cambiar el valor de ChangeWalpaper
-document.getElementById("change-walpaper").addEventListener("change", changeBackground);
+function initBackground(imgSrc) {
+    var background = {};
+    background.img = new Image();
+    background.img.src = imgSrc;
 
-function changeBackground() {
-    let imgUrl = document.getElementById("change-walpaper").value;
-    document.querySelector('.bg-image').style.backgroundImage = "url(" + imgUrl + ")";
+    background.draw = function () {
+        var bgImage = document.querySelector(".bg-image");
+        bgImage.style.backgroundImage = "url(" + background.img.src + ")";
+    }
+    return background;
 }
+
+var background = initBackground("./images/default-background.jpg");
+background.draw();
