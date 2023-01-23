@@ -1,0 +1,13 @@
+.bg-image {
+    background-color: blueviolet;
+    /* The image used  */
+    background-image: url("../images/default-background.jpg");
+
+    /* Add the blur effect  */
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+    height: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

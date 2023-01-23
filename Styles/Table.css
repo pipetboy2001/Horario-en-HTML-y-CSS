@@ -1,0 +1,37 @@
+/* Size table*/
+table {
+    position: fixed;
+    margin: 1%;
+    width: 40%;
+    height: 60%;
+    border-collapse: collapse;
+    font-size: 12px;
+    top: 20%;
+}
+/* Firt line*/
+th{
+    border: 1px inset rgb(255, 255, 255);
+}
+thead {
+    background-color: #37454d;
+    color: #ffffff;
+}
+
+/*centro */
+tbody {
+    background-color: #b8b7ad;
+    color: #000000;
+}
+/* Firts row */
+tbody td:first-child {
+    background-color: #7796A8;
+    border: none;
+}
+
+/* Firts column */
+tbody td {
+    height: 50px;
+    border: 1px inset rgb(255, 255, 255);
+}
+
+

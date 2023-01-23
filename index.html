@@ -2,39 +2,63 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>class_schedule</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="Styles/Styles.css">
+    <link rel="stylesheet" href="Styles/Background.css">
+    <link rel="stylesheet" href="Styles/Character.css">
+    <link rel="stylesheet" href="Styles/Bar.css">
+    <link rel="stylesheet" href="Styles/Table.css">
+    <link rel="stylesheet" href="Styles/Date.css">
+
 </head>
 
 <body>
-
-    
-        
-    
-
-    <!--background-->
+    <!-- background -->
     <div class="bg-image"></div>
-
-    
-
     <!--music-->
     <canvas id='canvas'></canvas>
+
     <!--tabla-->
     <div id="table"></div>
-    <!--personaje-->
+    <!-- Personaje -->
     <div id="Personaje"></div>
     <!--fecha-->
     <div class="container-clock">
         <h1 id="time">00:00:00</h1>
         <p id="date">date</p>
     </div>
-    
-</body>
 
-<!--Sound-->
-<script src="./js/sound.js"></script>
+    <script src="./js/Spotify.js"></script>
+    <script src="./Setting/Settings.js"></script>
+    <script src="./js/Particle.js"></script>
+    <script src="./js/Bar.js"></script>
+    <script src="./Setting/Script.js"></script>
+    
+    
+
+</body>
+<!--Scripts-->
+<!--Background-->
+<script src="./js/Background.js">
+    var background = initBackground("./images/default-background.jpg");
+    background.draw();
+</script>
+<!--Personaje-->
+<script src="./js/Character.js"> 
+    var character = initCharacter("./images/waifu.png");
+    character.draw();
+</script>
 <!--Tabla-->
-<script src="./js/table.js"></script>
-<!--reloj-->
-<script src="./js/clock.js"></script>
+<script src="./js/Table.js">
+    var table = initTable();
+    table.draw();
+</script>
+<!--Fecha-->
+<script src="./js/Date.js">
+    var date = initDate();
+    date.draw();
+</script>
+
 </html>
