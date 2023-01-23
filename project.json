@@ -108,7 +108,7 @@
         "order": 107,
         "text": "X Offset",
         "type": "slider",
-        "value": -397
+        "value": 397
       },
       "barOffsetY": {
         "editable": true,
