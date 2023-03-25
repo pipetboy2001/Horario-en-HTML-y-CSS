@@ -10,19 +10,21 @@ const createTable = () => {
     //Enter your classes
     const classes = [
         { name: 'SISTEMAS OPERATIVOS', color: '#cdecef'},
-        { name: 'PROYECTO DE INGENIERÍA DE SOFTWARE', color: '#ceeccd' }
+        { name: 'PROYECTO DE INGENIERÍA DE SOFTWARE', color: '#ceeccd' },
+        {name: 'TALLER DE INVESTIGACIÓN', color: '#e8c9c9'},
+        { name: 'BÚSQUEDA Y RECUPERACIÓN DE INFORMACIÓN', color: '#80deea'}
     ];
     // Modify according to your schedule
-    const days = ['Time', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday'];
+    const days = ['Time', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
     const rows = [
-        ['08:15 - 09:35', '', '', '', 'PROYECTO DE INGENIERÍA DE SOFTWARE', '',''],
-        ['09:50 - 11:10', '', '', '', 'PROYECTO DE INGENIERÍA DE SOFTWARE', 'PROYECTO DE INGENIERÍA DE SOFTWARE',''],
-        ['11:25 - 12:45', '', '', '', '', '',''],
-        ['13:45 - 15:05', 'SISTEMAS OPERATIVOS', '', '', 'SISTEMAS OPERATIVOS', '',''],
-        ['15:20 - 16:40', '', '', '', '', '',''],
-        ['16:55 - 18:15', '', '', 'SISTEMAS OPERATIVOS', 'SISTEMAS OPERATIVOS', '',''],
-        ['18:45 - 20:05', '', '', '', '', '','']
-        ['20:05 - 21:25', '', '', '', '', '','']
+        ['08:15 - 09:35', '', '', '', 'PROYECTO DE INGENIERÍA DE SOFTWARE', ''],
+        ['09:50 - 11:10', '', '', '', 'PROYECTO DE INGENIERÍA DE SOFTWARE', 'PROYECTO DE INGENIERÍA DE SOFTWARE'],
+        ['11:25 - 12:45', '', 'TALLER DE INVESTIGACIÓN', 'TALLER DE INVESTIGACIÓN', '', ''],
+        ['13:45 - 15:05', 'SISTEMAS OPERATIVOS', '', '', 'SISTEMAS OPERATIVOS', ''],
+        ['15:20 - 16:40', '', '', '', 'TALLER DE INVESTIGACIÓN', ''],
+        ['16:55 - 18:15', '', '', 'SISTEMAS OPERATIVOS', '', ''],
+        ['18:45 - 20:05', '', '', 'BÚSQUEDA Y RECUPERACIÓN DE INFORMACIÓN', '', 'BÚSQUEDA Y RECUPERACIÓN DE INFORMACIÓN'],
+        ['20:05 - 21:25', '', '', 'BÚSQUEDA Y RECUPERACIÓN DE INFORMACIÓN', '', '']
     ];
 
     table.appendChild(thead);

@@ -1,568 +1,631 @@
 {
-  "approved": true,
-  "contentrating": "Everyone",
-  "description": "Horario de clase",
-  "file": "index.html",
-  "general": {
-    "properties": {
-      "audioEqualize": {
-        "index": 17,
-        "order": 117,
-        "text": "Equalize",
-        "type": "bool",
-        "value": true
-      },
-      "audioPeaks": {
-        "editable": true,
-        "index": 16,
-        "max": 5,
-        "min": 1,
-        "order": 116,
-        "text": "Peaks",
-        "type": "slider",
-        "value": 2
-      },
-      "audioSettings": {
-        "index": 15,
-        "order": 115,
-        "text": "<br/><br/><h3>Audio Settings</h3>"
-      },
-      "barColour": {
-        "condition": "barCustomColour.value==false && ((spotifyEnabled.value==true && spotifyColour.value == false) || spotifyEnabled.value==false)",
-        "index": 4,
-        "options": [
-          {
-            "label": "Drumstep",
-            "value": "#F7218A"
-          },
-          {
-            "label": "House",
-            "value": "#F58D00"
-          },
-          {
-            "label": "Drum & Bass",
-            "value": "#FF0000"
-          },
-          {
-            "label": "Nu Disco/Indie Dance",
-            "value": "#1DAAB5"
-          },
-          {
-            "label": "Hard Dance/Hardcore",
-            "value": "#029700"
-          },
-          {
-            "label": "Dubstep",
-            "value": "#961EEA"
-          },
-          {
-            "label": "Electro",
-            "value": "#E7CD00"
-          },
-          {
-            "label": "Glitch Hop",
-            "value": "#0C9658"
-          },
-          {
-            "label": "Trance",
-            "value": "#007DE9"
-          },
-          {
-            "label": "Album Mix",
-            "value": "#FFFFFF"
-          },
-          {
-            "label": "Trap",
-            "value": "#8D0E28"
-          },
-          {
-            "label": "Misc (EDM, Trap, Bounce, etc)",
-            "value": "#C2C1C2"
-          }
-        ],
-        "order": 104,
-        "text": "Colour Presets",
-        "type": "combo",
-        "value": "#C2C1C2"
-      },
-      "barColourPicker": {
-        "condition": "barCustomColour.value==true && ((spotifyEnabled.value==true && spotifyColour.value == false) || spotifyEnabled.value==false)",
-        "index": 5,
-        "order": 105,
-        "text": "Colour",
-        "type": "color",
-        "value": "1 1 1"
-      },
-      "barCustomColour": {
-        "index": 3,
-        "order": 103,
-        "text": "Custom Colour",
-        "type": "bool",
-        "value": false
-      },
-      "barOffsetX": {
-        "editable": true,
-        "index": 7,
-        "max": 1000,
-        "min": -1000,
-        "order": 107,
-        "text": "X Offset",
-        "type": "slider",
-        "value": 397
-      },
-      "barOffsetY": {
-        "editable": true,
-        "index": 8,
-        "max": 1000,
-        "min": -1000,
-        "order": 108,
-        "text": "Y Offset",
-        "type": "slider",
-        "value": 0
-      },
-      "barPadding": {
-        "editable": true,
-        "index": 2,
-        "max": 10,
-        "min": 0,
-        "order": 102,
-        "text": "Padding",
-        "type": "slider",
-        "value": 5
-      },
-      "barSettings": {
-        "index": 0,
-        "order": 100,
-        "text": "<h3>Bar Settings</h3>"
-      },
-      "barSmoothing": {
-        "editable": true,
-        "index": 6,
-        "max": 10,
-        "min": 1,
-        "order": 106,
-        "text": "Smoothing",
-        "type": "slider",
-        "value": 3
-      },
-      "barWidth": {
-        "editable": true,
-        "index": 1,
-        "max": 40,
-        "min": 1,
-        "order": 101,
-        "text": "Width",
-        "type": "slider",
-        "value": 13
-      },
-      "headerAlign": {
-        "index": 26,
-        "options": [
-          {
-            "label": "Left",
-            "value": "left"
-          },
-          {
-            "label": "Centre",
-            "value": "center"
-          },
-          {
-            "label": "Right",
-            "value": "right"
-          }
-        ],
-        "order": 126,
-        "text": "Alignment",
-        "type": "combo",
-        "value": "left"
-      },
-      "headerColour": {
-        "index": 28,
-        "order": 128,
-        "text": "Colour",
-        "type": "color",
-        "value": "1 1 1"
-      },
-      "headerOffsetX": {
-        "editable": true,
-        "index": 29,
-        "max": 1000,
-        "min": -1000,
-        "order": 129,
-        "text": "X Offset",
-        "type": "slider",
-        "value": 600
-      },
-      "headerOffsetY": {
-        "editable": true,
-        "index": 30,
-        "max": 1000,
-        "min": -1000,
-        "order": 130,
-        "text": "Y Offset",
-        "type": "slider",
-        "value": 0
-      },
-      "headerSettings": {
-        "index": 24,
-        "order": 124,
-        "text": "<br/><br/><h3>Header Settings</h3>"
-      },
-      "headerSize": {
-        "editable": true,
-        "index": 27,
-        "max": 200,
-        "min": 50,
-        "order": 127,
-        "text": "Font Size",
-        "type": "slider",
-        "value": 40
-      },
-      "headerText": {
-        "condition": "spotifyEnabled.value==false",
-        "index": 25,
-        "order": 125,
-        "text": "Text",
-        "type": "textinput",
-        "value": "Header"
-      },
-      "logoBackground": {
-        "condition": "logoEnabled.value==true",
-        "index": 20,
-        "order": 120,
-        "text": "Background",
-        "type": "bool",
-        "value": true
-      },
-      "logoEnabled": {
-        "index": 19,
-        "order": 119,
-        "text": "Enabled",
-        "type": "bool",
-        "value": true
-      },
-      "logoOffsetX": {
-        "condition": "logoEnabled.value==true",
-        "editable": true,
-        "index": 22,
-        "max": 1000,
-        "min": -1000,
-        "order": 122,
-        "text": "X Offset",
-        "type": "slider",
-        "value": 600
-      },
-      "logoOffsetY": {
-        "condition": "logoEnabled.value==true",
-        "editable": true,
-        "index": 23,
-        "max": 1000,
-        "min": -1000,
-        "order": 123,
-        "text": "Y Offset",
-        "type": "slider",
-        "value": 0
-      },
-      "logoScale": {
-        "condition": "logoEnabled.value==true",
-        "editable": true,
-        "index": 21,
-        "max": 3,
-        "min": 0.5,
-        "order": 121,
-        "text": "Scale",
-        "type": "slider",
-        "value": 1
-      },
-      "logoSettings": {
-        "index": 18,
-        "order": 118,
-        "text": "<br/><br/><h3>Logo Settings</h3>"
-      },
-      "particleAmount": {
-        "condition": "particlesEnabled.value==true",
-        "editable": true,
-        "index": 12,
-        "max": 400,
-        "min": 1,
-        "order": 112,
-        "text": "Amount",
-        "type": "slider",
-        "value": 50
-      },
-      "particleDirection": {
-        "condition": "particlesEnabled.value==true",
-        "index": 14,
-        "options": [
-          {
-            "label": "Left",
-            "value": "Left"
-          },
-          {
-            "label": "Right",
-            "value": "Right"
-          }
-        ],
-        "order": 114,
-        "text": "Direction",
-        "type": "combo",
-        "value": "Right"
-      },
-      "particleSettings": {
-        "index": 9,
-        "order": 109,
-        "text": "<br/><br/><h3>Particle Settings</h3>"
-      },
-      "particleSpeed": {
-        "condition": "particlesEnabled.value==true",
-        "editable": true,
-        "index": 13,
-        "max": 10,
-        "min": 1,
-        "order": 113,
-        "text": "Speed",
-        "type": "slider",
-        "value": 2
-      },
-      "particlesEnabled": {
-        "index": 10,
-        "order": 110,
-        "text": "Enabled",
-        "type": "bool",
-        "value": true
-      },
-      "particlesReact": {
-        "index": 11,
-        "order": 111,
-        "text": "Reactive",
-        "type": "bool",
-        "value": true
-      },
-      "schemecolor": {
-        "order": 0,
-        "text": "ui_browse_properties_scheme_color",
-        "type": "color",
-        "value": "0 0 0"
-      },
-      "spotifyColour": {
-        "condition": "spotifyEnabled.value==true && spotifyLogo.value==true",
-        "index": 42,
-        "order": 142,
-        "text": "Sync Colour",
-        "type": "bool",
-        "value": false
-      },
-      "spotifyEnabled": {
-        "index": 39,
-        "order": 139,
-        "text": "Enabled",
-        "type": "bool",
-        "value": false
-      },
-      "spotifyLogo": {
-        "condition": "spotifyEnabled.value==true",
-        "index": 41,
-        "order": 141,
-        "text": "Sync Logo",
-        "type": "bool",
-        "value": true
-      },
-      "spotifyProgress": {
-        "condition": "spotifyEnabled.value==true",
-        "index": 48,
-        "order": 148,
-        "text": "Progress Bar",
-        "type": "bool",
-        "value": true
-      },
-      "spotifyProgressCustom": {
-        "condition": "spotifyEnabled.value==true && spotifyProgress.value==true",
-        "index": 49,
-        "order": 149,
-        "text": "Custom Size",
-        "type": "bool",
-        "value": true
-      },
-      "spotifyProgressHeight": {
-        "condition": "spotifyEnabled.value==true && spotifyProgress.value==true && spotifyProgressCustom.value==true",
-        "editable": true,
-        "index": 51,
-        "max": 100,
-        "min": 0.1,
-        "order": 151,
-        "text": "Height",
-        "type": "slider",
-        "value": 0.5
-      },
-      "spotifyProgressWidth": {
-        "condition": "spotifyEnabled.value==true && spotifyProgress.value==true && spotifyProgressCustom.value==true",
-        "editable": true,
-        "index": 50,
-        "max": 100,
-        "min": 0.1,
-        "order": 150,
-        "text": "Width",
-        "type": "slider",
-        "value": 50
-      },
-      "spotifyProgressX": {
-        "condition": "spotifyEnabled.value==true && spotifyProgress.value==true",
-        "editable": true,
-        "index": 52,
-        "max": 1000,
-        "min": -1000,
-        "order": 152,
-        "text": "X Offset",
-        "type": "slider",
-        "value": 600
-      },
-      "spotifyProgressY": {
-        "condition": "spotifyEnabled.value==true && spotifyProgress.value==true",
-        "editable": true,
-        "index": 53,
-        "max": 1000,
-        "min": -1000,
-        "order": 153,
-        "text": "Y Offset",
-        "type": "slider",
-        "value": 0
-      },
-      "spotifySettings": {
-        "index": 38,
-        "order": 138,
-        "text": "<br/><br/><h3>Spotify Settings</h3>"
-      },
-      "spotifyShorten": {
-        "condition": "spotifyEnabled.value==true",
-        "index": 46,
-        "order": 146,
-        "text": "Shorten Titles",
-        "type": "bool",
-        "value": true
-      },
-      "spotifySwap": {
-        "condition": "spotifyEnabled.value==true",
-        "index": 47,
-        "order": 147,
-        "text": "Swap Header Order",
-        "type": "bool",
-        "value": false
-      },
-      "spotifyToken": {
-        "condition": "spotifyEnabled.value==true",
-        "index": 40,
-        "order": 140,
-        "text": "Refresh Token<br/><small>Check the workshop page to see a guide on how to generate a token.</small><br/><br/>",
-        "type": "textinput",
-        "value": ""
-      },
-      "spotifyUpdate": {
-        "condition": "spotifyEnabled.value==true",
-        "index": 45,
-        "max": 10,
-        "min": 2,
-        "order": 145,
-        "text": "Update Rate<br/><small>Delay between each update (seconds)</small>",
-        "type": "slider",
-        "value": 5
-      },
-      "spotifyVibrancy": {
-        "condition": "spotifyEnabled.value==true && spotifyLogo.value==true && spotifyColour.value==true && spotifyVibrant.value==true",
-        "editable": true,
-        "index": 44,
-        "max": 100,
-        "min": 0,
-        "order": 144,
-        "text": "Vibrancy",
-        "type": "slider",
-        "value": 50
-      },
-      "spotifyVibrant": {
-        "condition": "spotifyEnabled.value==true && spotifyLogo.value==true && spotifyColour.value==true",
-        "index": 43,
-        "order": 143,
-        "text": "Vibrant Colour",
-        "type": "bool",
-        "value": false
-      },
-      "subheaderAlign": {
-        "index": 33,
-        "options": [
-          {
-            "label": "Left",
-            "value": "left"
-          },
-          {
-            "label": "Centre",
-            "value": "center"
-          },
-          {
-            "label": "Right",
-            "value": "right"
-          }
-        ],
-        "order": 133,
-        "text": "Alignment",
-        "type": "combo",
-        "value": "left"
-      },
-      "subheaderColour": {
-        "index": 35,
-        "order": 135,
-        "text": "Colour",
-        "type": "color",
-        "value": "1 1 1"
-      },
-      "subheaderOffsetX": {
-        "editable": true,
-        "index": 36,
-        "max": 1000,
-        "min": -1000,
-        "order": 136,
-        "text": "X Offset",
-        "type": "slider",
-        "value": 600
-      },
-      "subheaderOffsetY": {
-        "editable": true,
-        "index": 37,
-        "max": 1000,
-        "min": -1000,
-        "order": 137,
-        "text": "Y Offset",
-        "type": "slider",
-        "value": -34
-      },
-      "subheaderSettings": {
-        "index": 31,
-        "order": 131,
-        "text": "<br/><br/><h3>Sub Header Settings</h3>"
-      },
-      "subheaderSize": {
-        "editable": true,
-        "index": 34,
-        "max": 200,
-        "min": 25,
-        "order": 134,
-        "text": "Font Size",
-        "type": "slider",
-        "value": 25
-      },
-      "subheaderText": {
-        "condition": "spotifyEnabled.value==false",
-        "index": 32,
-        "order": 132,
-        "text": "Text",
-        "type": "textinput",
-        "value": "Sub Header"
-      }
-    },
-    "supportsaudioprocessing": true
-  },
-  "preview": "preview.png",
-  "tags": ["Music"],
-  "title": "class schedule",
-  "type": "web",
-  "version": 0,
-  "visibility": "public"
+	"approved" : true,
+	"contentrating" : "Everyone",
+	"description" : "Horario de clase",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"audioEqualize" : 
+			{
+				"index" : 17,
+				"order" : 117,
+				"text" : "Equalize",
+				"type" : "bool",
+				"value" : true
+			},
+			"audioPeaks" : 
+			{
+				"editable" : true,
+				"index" : 16,
+				"max" : 5,
+				"min" : 1,
+				"order" : 116,
+				"text" : "Peaks",
+				"type" : "slider",
+				"value" : 2
+			},
+			"audioSettings" : 
+			{
+				"index" : 15,
+				"order" : 115,
+				"text" : "<br/><br/><h3>Audio Settings</h3>"
+			},
+			"barColour" : 
+			{
+				"condition" : "barCustomColour.value==false && ((spotifyEnabled.value==true && spotifyColour.value == false) || spotifyEnabled.value==false)",
+				"index" : 4,
+				"options" : 
+				[
+					{
+						"label" : "Drumstep",
+						"value" : "#F7218A"
+					},
+					{
+						"label" : "House",
+						"value" : "#F58D00"
+					},
+					{
+						"label" : "Drum & Bass",
+						"value" : "#FF0000"
+					},
+					{
+						"label" : "Nu Disco/Indie Dance",
+						"value" : "#1DAAB5"
+					},
+					{
+						"label" : "Hard Dance/Hardcore",
+						"value" : "#029700"
+					},
+					{
+						"label" : "Dubstep",
+						"value" : "#961EEA"
+					},
+					{
+						"label" : "Electro",
+						"value" : "#E7CD00"
+					},
+					{
+						"label" : "Glitch Hop",
+						"value" : "#0C9658"
+					},
+					{
+						"label" : "Trance",
+						"value" : "#007DE9"
+					},
+					{
+						"label" : "Album Mix",
+						"value" : "#FFFFFF"
+					},
+					{
+						"label" : "Trap",
+						"value" : "#8D0E28"
+					},
+					{
+						"label" : "Misc (EDM, Trap, Bounce, etc)",
+						"value" : "#C2C1C2"
+					}
+				],
+				"order" : 104,
+				"text" : "Colour Presets",
+				"type" : "combo",
+				"value" : "#C2C1C2"
+			},
+			"barColourPicker" : 
+			{
+				"condition" : "barCustomColour.value==true && ((spotifyEnabled.value==true && spotifyColour.value == false) || spotifyEnabled.value==false)",
+				"index" : 5,
+				"order" : 105,
+				"text" : "Colour",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"barCustomColour" : 
+			{
+				"index" : 3,
+				"order" : 103,
+				"text" : "Custom Colour",
+				"type" : "bool",
+				"value" : false
+			},
+			"barOffsetX" : 
+			{
+				"editable" : true,
+				"index" : 7,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 107,
+				"text" : "X Offset",
+				"type" : "slider",
+				"value" : 397
+			},
+			"barOffsetY" : 
+			{
+				"editable" : true,
+				"index" : 8,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 108,
+				"text" : "Y Offset",
+				"type" : "slider",
+				"value" : 0
+			},
+			"barPadding" : 
+			{
+				"editable" : true,
+				"index" : 2,
+				"max" : 10,
+				"min" : 0,
+				"order" : 102,
+				"text" : "Padding",
+				"type" : "slider",
+				"value" : 5
+			},
+			"barSettings" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "<h3>Bar Settings</h3>"
+			},
+			"barSmoothing" : 
+			{
+				"editable" : true,
+				"index" : 6,
+				"max" : 10,
+				"min" : 1,
+				"order" : 106,
+				"text" : "Smoothing",
+				"type" : "slider",
+				"value" : 3
+			},
+			"barWidth" : 
+			{
+				"editable" : true,
+				"index" : 1,
+				"max" : 40,
+				"min" : 1,
+				"order" : 101,
+				"text" : "Width",
+				"type" : "slider",
+				"value" : 13
+			},
+			"headerAlign" : 
+			{
+				"index" : 26,
+				"options" : 
+				[
+					{
+						"label" : "Left",
+						"value" : "left"
+					},
+					{
+						"label" : "Centre",
+						"value" : "center"
+					},
+					{
+						"label" : "Right",
+						"value" : "right"
+					}
+				],
+				"order" : 126,
+				"text" : "Alignment",
+				"type" : "combo",
+				"value" : "left"
+			},
+			"headerColour" : 
+			{
+				"index" : 28,
+				"order" : 128,
+				"text" : "Colour",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"headerOffsetX" : 
+			{
+				"editable" : true,
+				"index" : 29,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 129,
+				"text" : "X Offset",
+				"type" : "slider",
+				"value" : 600
+			},
+			"headerOffsetY" : 
+			{
+				"editable" : true,
+				"index" : 30,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 130,
+				"text" : "Y Offset",
+				"type" : "slider",
+				"value" : 0
+			},
+			"headerSettings" : 
+			{
+				"index" : 24,
+				"order" : 124,
+				"text" : "<br/><br/><h3>Header Settings</h3>"
+			},
+			"headerSize" : 
+			{
+				"editable" : true,
+				"index" : 27,
+				"max" : 200,
+				"min" : 50,
+				"order" : 127,
+				"text" : "Font Size",
+				"type" : "slider",
+				"value" : 40
+			},
+			"headerText" : 
+			{
+				"condition" : "spotifyEnabled.value==false",
+				"index" : 25,
+				"order" : 125,
+				"text" : "Text",
+				"type" : "textinput",
+				"value" : "Header"
+			},
+			"logoBackground" : 
+			{
+				"condition" : "logoEnabled.value==true",
+				"index" : 20,
+				"order" : 120,
+				"text" : "Background",
+				"type" : "bool",
+				"value" : true
+			},
+			"logoEnabled" : 
+			{
+				"index" : 19,
+				"order" : 119,
+				"text" : "Enabled",
+				"type" : "bool",
+				"value" : true
+			},
+			"logoOffsetX" : 
+			{
+				"condition" : "logoEnabled.value==true",
+				"editable" : true,
+				"index" : 22,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 122,
+				"text" : "X Offset",
+				"type" : "slider",
+				"value" : 600
+			},
+			"logoOffsetY" : 
+			{
+				"condition" : "logoEnabled.value==true",
+				"editable" : true,
+				"index" : 23,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 123,
+				"text" : "Y Offset",
+				"type" : "slider",
+				"value" : 0
+			},
+			"logoScale" : 
+			{
+				"condition" : "logoEnabled.value==true",
+				"editable" : true,
+				"index" : 21,
+				"max" : 3,
+				"min" : 0.5,
+				"order" : 121,
+				"text" : "Scale",
+				"type" : "slider",
+				"value" : 1
+			},
+			"logoSettings" : 
+			{
+				"index" : 18,
+				"order" : 118,
+				"text" : "<br/><br/><h3>Logo Settings</h3>"
+			},
+			"particleAmount" : 
+			{
+				"condition" : "particlesEnabled.value==true",
+				"editable" : true,
+				"index" : 12,
+				"max" : 400,
+				"min" : 1,
+				"order" : 112,
+				"text" : "Amount",
+				"type" : "slider",
+				"value" : 50
+			},
+			"particleDirection" : 
+			{
+				"condition" : "particlesEnabled.value==true",
+				"index" : 14,
+				"options" : 
+				[
+					{
+						"label" : "Left",
+						"value" : "Left"
+					},
+					{
+						"label" : "Right",
+						"value" : "Right"
+					}
+				],
+				"order" : 114,
+				"text" : "Direction",
+				"type" : "combo",
+				"value" : "Right"
+			},
+			"particleSettings" : 
+			{
+				"index" : 9,
+				"order" : 109,
+				"text" : "<br/><br/><h3>Particle Settings</h3>"
+			},
+			"particleSpeed" : 
+			{
+				"condition" : "particlesEnabled.value==true",
+				"editable" : true,
+				"index" : 13,
+				"max" : 10,
+				"min" : 1,
+				"order" : 113,
+				"text" : "Speed",
+				"type" : "slider",
+				"value" : 2
+			},
+			"particlesEnabled" : 
+			{
+				"index" : 10,
+				"order" : 110,
+				"text" : "Enabled",
+				"type" : "bool",
+				"value" : true
+			},
+			"particlesReact" : 
+			{
+				"index" : 11,
+				"order" : 111,
+				"text" : "Reactive",
+				"type" : "bool",
+				"value" : true
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"spotifyColour" : 
+			{
+				"condition" : "spotifyEnabled.value==true && spotifyLogo.value==true",
+				"index" : 42,
+				"order" : 142,
+				"text" : "Sync Colour",
+				"type" : "bool",
+				"value" : false
+			},
+			"spotifyEnabled" : 
+			{
+				"index" : 39,
+				"order" : 139,
+				"text" : "Enabled",
+				"type" : "bool",
+				"value" : false
+			},
+			"spotifyLogo" : 
+			{
+				"condition" : "spotifyEnabled.value==true",
+				"index" : 41,
+				"order" : 141,
+				"text" : "Sync Logo",
+				"type" : "bool",
+				"value" : true
+			},
+			"spotifyProgress" : 
+			{
+				"condition" : "spotifyEnabled.value==true",
+				"index" : 48,
+				"order" : 148,
+				"text" : "Progress Bar",
+				"type" : "bool",
+				"value" : true
+			},
+			"spotifyProgressCustom" : 
+			{
+				"condition" : "spotifyEnabled.value==true && spotifyProgress.value==true",
+				"index" : 49,
+				"order" : 149,
+				"text" : "Custom Size",
+				"type" : "bool",
+				"value" : true
+			},
+			"spotifyProgressHeight" : 
+			{
+				"condition" : "spotifyEnabled.value==true && spotifyProgress.value==true && spotifyProgressCustom.value==true",
+				"editable" : true,
+				"index" : 51,
+				"max" : 100,
+				"min" : 0.1,
+				"order" : 151,
+				"text" : "Height",
+				"type" : "slider",
+				"value" : 0.5
+			},
+			"spotifyProgressWidth" : 
+			{
+				"condition" : "spotifyEnabled.value==true && spotifyProgress.value==true && spotifyProgressCustom.value==true",
+				"editable" : true,
+				"index" : 50,
+				"max" : 100,
+				"min" : 0.1,
+				"order" : 150,
+				"text" : "Width",
+				"type" : "slider",
+				"value" : 50
+			},
+			"spotifyProgressX" : 
+			{
+				"condition" : "spotifyEnabled.value==true && spotifyProgress.value==true",
+				"editable" : true,
+				"index" : 52,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 152,
+				"text" : "X Offset",
+				"type" : "slider",
+				"value" : 600
+			},
+			"spotifyProgressY" : 
+			{
+				"condition" : "spotifyEnabled.value==true && spotifyProgress.value==true",
+				"editable" : true,
+				"index" : 53,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 153,
+				"text" : "Y Offset",
+				"type" : "slider",
+				"value" : 0
+			},
+			"spotifySettings" : 
+			{
+				"index" : 38,
+				"order" : 138,
+				"text" : "<br/><br/><h3>Spotify Settings</h3>"
+			},
+			"spotifyShorten" : 
+			{
+				"condition" : "spotifyEnabled.value==true",
+				"index" : 46,
+				"order" : 146,
+				"text" : "Shorten Titles",
+				"type" : "bool",
+				"value" : true
+			},
+			"spotifySwap" : 
+			{
+				"condition" : "spotifyEnabled.value==true",
+				"index" : 47,
+				"order" : 147,
+				"text" : "Swap Header Order",
+				"type" : "bool",
+				"value" : false
+			},
+			"spotifyToken" : 
+			{
+				"condition" : "spotifyEnabled.value==true",
+				"index" : 40,
+				"order" : 140,
+				"text" : "Refresh Token<br/><small>Check the workshop page to see a guide on how to generate a token.</small><br/><br/>",
+				"type" : "textinput",
+				"value" : ""
+			},
+			"spotifyUpdate" : 
+			{
+				"condition" : "spotifyEnabled.value==true",
+				"index" : 45,
+				"max" : 10,
+				"min" : 2,
+				"order" : 145,
+				"text" : "Update Rate<br/><small>Delay between each update (seconds)</small>",
+				"type" : "slider",
+				"value" : 5
+			},
+			"spotifyVibrancy" : 
+			{
+				"condition" : "spotifyEnabled.value==true && spotifyLogo.value==true && spotifyColour.value==true && spotifyVibrant.value==true",
+				"editable" : true,
+				"index" : 44,
+				"max" : 100,
+				"min" : 0,
+				"order" : 144,
+				"text" : "Vibrancy",
+				"type" : "slider",
+				"value" : 50
+			},
+			"spotifyVibrant" : 
+			{
+				"condition" : "spotifyEnabled.value==true && spotifyLogo.value==true && spotifyColour.value==true",
+				"index" : 43,
+				"order" : 143,
+				"text" : "Vibrant Colour",
+				"type" : "bool",
+				"value" : false
+			},
+			"subheaderAlign" : 
+			{
+				"index" : 33,
+				"options" : 
+				[
+					{
+						"label" : "Left",
+						"value" : "left"
+					},
+					{
+						"label" : "Centre",
+						"value" : "center"
+					},
+					{
+						"label" : "Right",
+						"value" : "right"
+					}
+				],
+				"order" : 133,
+				"text" : "Alignment",
+				"type" : "combo",
+				"value" : "left"
+			},
+			"subheaderColour" : 
+			{
+				"index" : 35,
+				"order" : 135,
+				"text" : "Colour",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"subheaderOffsetX" : 
+			{
+				"editable" : true,
+				"index" : 36,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 136,
+				"text" : "X Offset",
+				"type" : "slider",
+				"value" : 600
+			},
+			"subheaderOffsetY" : 
+			{
+				"editable" : true,
+				"index" : 37,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 137,
+				"text" : "Y Offset",
+				"type" : "slider",
+				"value" : -34
+			},
+			"subheaderSettings" : 
+			{
+				"index" : 31,
+				"order" : 131,
+				"text" : "<br/><br/><h3>Sub Header Settings</h3>"
+			},
+			"subheaderSize" : 
+			{
+				"editable" : true,
+				"index" : 34,
+				"max" : 200,
+				"min" : 25,
+				"order" : 134,
+				"text" : "Font Size",
+				"type" : "slider",
+				"value" : 25
+			},
+			"subheaderText" : 
+			{
+				"condition" : "spotifyEnabled.value==false",
+				"index" : 32,
+				"order" : 132,
+				"text" : "Text",
+				"type" : "textinput",
+				"value" : "Sub Header"
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"preview" : "preview.gif",
+	"snapshotformat" : 2,
+	"snapshotoverlay" : "",
+	"tags" : [ "Music" ],
+	"title" : "class schedule v.1.5",
+	"type" : "web",
+	"version" : 0,
+	"visibility" : "public"
 }

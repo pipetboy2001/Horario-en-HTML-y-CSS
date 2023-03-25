@@ -2,16 +2,17 @@
     <h1 align="center">Horario para wallpaper engine</h1>
     <h4 align="center">Un horario web para Wallpaper Engine.</h4>
     <p align="center">
-        <strong>Última actualización:</strong> 22 Enero 2023<br>
+        <strong>Última actualización:</strong> 25 Marzo 2023<br>
     </p>
 </center>
 Preview wallpaper
 <center>
+    <img src="./preview.gif" alt="Preview wallpaper">
     <img src="./preview.png" alt="Preview wallpaper">
 </center>
 
 ### CARACTERÍSTICAS
-- Horario de 6 horas
+- Horario personalizable
 - Integracion con Spotify 
 - Obtener la Hora actual segun tu computadora
 - Colocar un personaje personalizado mediante un Gif/png
