@@ -1,14 +1,13 @@
 function initCharacter(imgSrc) {
-    var character = {};
-    character.img = new Image();
+    const character = {
+        img: new Image(),
+        draw() {
+            document.getElementById("Personaje").appendChild(this.img);
+        }
+    };
     character.img.src = imgSrc;
-
-    character.draw = function () {
-        var personaje = document.getElementById("Personaje");
-        personaje.appendChild(character.img);
-    }
     return character;
 }
 
-var character = initCharacter("./images/waifu.gif");
+const character = initCharacter("./images/waifu.gif");
 character.draw();

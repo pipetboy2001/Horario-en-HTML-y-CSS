@@ -6,9 +6,10 @@
     color: #eee7cc;
     position: fixed;
     border-radius: 12px;
-    
-    top: 10%;
-    left: 45%;
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
     /* Definimos la animación */
     animation: cambio-margen 5s infinite;
 }

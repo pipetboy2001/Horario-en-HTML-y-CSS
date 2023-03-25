@@ -1,14 +1,13 @@
-function initBackground(imgSrc) {
-    var background = {};
-    background.img = new Image();
-    background.img.src = imgSrc;
-
-    background.draw = function () {
-        var bgImage = document.querySelector(".bg-image");
-        bgImage.style.backgroundImage = "url(" + background.img.src + ")";
+class Background {
+    constructor(imgSrc) {
+        this.img = new Image();
+        this.img.src = imgSrc;
     }
-    return background;
+    draw() {
+        const bgImage = document.querySelector(".bg-image");
+        bgImage.style.backgroundImage = `url(${this.img.src})`;
+    }
 }
 
-var background = initBackground("./images/default-background.jpg");
+const background = new Background("./images/default-background.jpg");
 background.draw();
