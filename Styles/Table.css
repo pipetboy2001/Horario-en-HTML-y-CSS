@@ -1,37 +1,71 @@
 /* Size table*/
 table {
     position: fixed;
-    margin: 1%;
-    width: 40%;
-    height: 60%;
+    top: 55%;
+    left: 1%;
+    transform: translate(0%, -50%);
     border-collapse: collapse;
-    font-size: 12px;
-    top: 20%;
+    font-size: 16px;
+    width: 80%;
+    height: 60%;
+    max-width: 50%;
+    max-height: 800px;
+    box-shadow: 0 0 20px rgb(0, 0, 255), 0 0 20px rgb(0, 0, 255) inset;
+    animation: cambio-borde 5s infinite;
+    overflow-x: auto;
 }
-/* Firt line*/
-th{
-    border: 1px inset rgb(255, 255, 255);
+
+/* Definimos la animación personalizada */
+@keyframes cambio-borde {
+    0% {
+        box-shadow: 0 0 20px blueviolet, 0 0 20px blueviolet inset;
+    }
+
+    25% {
+        box-shadow: 0 0 20px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0) inset;
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgb(0, 255, 0), 0 0 20px rgb(0, 255, 0) inset;
+    }
+
+    75% {
+        box-shadow: 0 0 20px rgb(0, 0, 255), 0 0 20px rgb(0, 0, 255) inset;
+    }
+
+    100% {
+        box-shadow: 0 0 20px blueviolet, 0 0 20px blueviolet inset;
+    }
 }
+
+/* Table header */
 thead {
-    background-color: #37454d;
+    background-color: #222222;
     color: #ffffff;
 }
 
-/*centro */
+/* Table header cells */
+th {
+    padding: 10px 15px;
+    border: 2px solid #222222;
+}
+
+/* Table body */
 tbody {
-    background-color: #b8b7ad;
-    color: #000000;
-}
-/* Firts row */
-tbody td:first-child {
-    background-color: #7796A8;
-    border: none;
+    background-color: #f9f9f9;
+    color: #333333;
 }
 
-/* Firts column */
-tbody td {
-    height: 50px;
-    border: 1px inset rgb(255, 255, 255);
+/* Table body cells */
+td {
+    padding: 10px 15px;
+    border: 2px solid #dddddd;
+    text-align: center;
 }
 
-
+/* First column of table */
+td:first-child {
+    background-color: #dddddd;
+    font-weight: bold;
+    font-size: 18px;
+}
