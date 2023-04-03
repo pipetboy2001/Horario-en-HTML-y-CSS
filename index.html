@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="Styles/Bar.css">
     <link rel="stylesheet" href="Styles/Table.css">
     <link rel="stylesheet" href="Styles/Date.css">
-
+    <link rel="stylesheet" href="Styles/Weather.css">
 </head>
 
 <body>
@@ -24,20 +24,30 @@
     <div id="table"></div>
     <!-- Personaje -->
     <div id="Personaje"></div>
+
     <!--fecha-->
     <div class="container-clock">
         <h1 id="time">00:00:00</h1>
         <p id="date">date</p>
     </div>
 
+    <!--Weather-->
+    <div class="container-Weather" onclick="changeDeg()" id="container-Weather">
+        <div class="weather-current">
+            <div id="city"></div>
+            <!-- Aquí va el tiempo actual -->
+            <div class="weather-current-temp">
+                <span id="temp">0</span>
+            </div>
+        </div>
+    </div>
+
+
     <script src="./js/Spotify.js"></script>
     <script src="./Setting/Settings.js"></script>
     <script src="./js/Particle.js"></script>
     <script src="./js/Bar.js"></script>
     <script src="./Setting/Script.js"></script>
-    
-    
-
 </body>
 <!--Scripts-->
 <!--Background-->
@@ -60,5 +70,9 @@
     var date = initDate();
     date.draw();
 </script>
+<!--Weather-->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src="js/weather.js"></script>
 
 </html>
